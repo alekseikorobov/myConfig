@@ -3,7 +3,8 @@ using System.Diagnostics;
 using System.IO;
 using System.Security.Cryptography;
 using System.Text;
-
+namespace myConfig
+{
 public class Crypt
 {
 	/// /// Шифрует строку value 
@@ -54,4 +55,5 @@ public class Crypt
 		MemoryStream ms = new MemoryStream(key);
 		return new CryptoStream(ms, ct, CryptoStreamMode.Read);
 	}
+}
 }
