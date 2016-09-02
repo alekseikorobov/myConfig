@@ -2,7 +2,7 @@
 
 ## Использование
 
-1. Создается класс где будут храниться все значения
+- Создается класс где будут храниться все значения
 Например:
 ```C#
 public class Setting{
@@ -16,7 +16,7 @@ public class Setting{
     public string Seting3{get;set;}
 }
 ```
-2. Создается глобальная переменная, в которой указывается путь к файлу
+- Создается глобальная переменная, в которой указывается путь к файлу
 ```C#
 using myConfig;
 
@@ -30,7 +30,7 @@ void main()
     set.writeConfig(set.config); //сохранение в файл
 }
 ```
-результат в виде xml, который удобно читать и изменять
+- результат в виде xml, который удобно читать и изменять
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <Setting xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
