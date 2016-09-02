@@ -29,5 +29,16 @@ void main()
     set.config.Seting1 = "valval2"; //запись в класс
     set.writeConfig(set.config); //сохранение в файл
 }
-
+```
+## Дополнительное шифрование данных в файле
+Для шифрования данных имеется класс Crypt, которые имеет два статических метода Encrypt и Decrypt (шифорвание и деширование соответственно)
+Использование:
+```C#
+void main()
+{
+    string secretPass = "1234"; //ключ к шифрованию, которые не должен быть непосредственно в программе
+    Console.Write(myConfig.Crypt.Decrypt(set.config.Seting1,secretPass)); //чтение зашифрованных данных
+    set.config.Seting1 = "valval2"; //запись в класс
+    set.writeConfig(myConfig.Crypt.Encrypt(set.config,secretPass)); //сохранение в файл в шифрованном виде
+}
 ```
